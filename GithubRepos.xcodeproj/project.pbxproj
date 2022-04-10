@@ -23,6 +23,10 @@
 		19CF363E2803141E008AD04F /* DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF363D2803141E008AD04F /* DefaultView.swift */; };
 		19CF364228031458008AD04F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF364128031458008AD04F /* UIView+Extension.swift */; };
 		19CF364628031657008AD04F /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF364528031657008AD04F /* RepoTableViewCell.swift */; };
+		19CF364C28031F6C008AD04F /* RepoBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF364B28031F6C008AD04F /* RepoBase.swift */; };
+		19CF364E2803201A008AD04F /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF364D2803201A008AD04F /* Items.swift */; };
+		19CF365028032041008AD04F /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF364F28032041008AD04F /* Owner.swift */; };
+		19CF365228032069008AD04F /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF365128032069008AD04F /* License.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		19CF363D2803141E008AD04F /* DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultView.swift; sourceTree = "<group>"; };
 		19CF364128031458008AD04F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		19CF364528031657008AD04F /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
+		19CF364B28031F6C008AD04F /* RepoBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoBase.swift; sourceTree = "<group>"; };
+		19CF364D2803201A008AD04F /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		19CF364F28032041008AD04F /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		19CF365128032069008AD04F /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,7 @@
 		19CF361F28030789008AD04F /* Ponso */ = {
 			isa = PBXGroup;
 			children = (
+				19CF364A28031F5F008AD04F /* Repo */,
 			);
 			path = Ponso;
 			sourceTree = "<group>";
@@ -257,6 +266,17 @@
 			path = TableViewCells;
 			sourceTree = "<group>";
 		};
+		19CF364A28031F5F008AD04F /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				19CF364B28031F6C008AD04F /* RepoBase.swift */,
+				19CF364D2803201A008AD04F /* Items.swift */,
+				19CF364F28032041008AD04F /* Owner.swift */,
+				19CF365128032069008AD04F /* License.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -330,17 +350,21 @@
 			files = (
 				198F97C12802DFC300E43FD5 /* ViewController.swift in Sources */,
 				19CF36272803097E008AD04F /* HomeVC.swift in Sources */,
+				19CF364C28031F6C008AD04F /* RepoBase.swift in Sources */,
 				19CF363B2803125D008AD04F /* BodyLabel.swift in Sources */,
 				19CF3638280311F9008AD04F /* DefaultTitleLabel.swift in Sources */,
 				19CF363428030FC9008AD04F /* UIImageView+Extension.swift in Sources */,
 				19CF362E28030D29008AD04F /* ErrorMessages.swift in Sources */,
 				19CF364228031458008AD04F /* UIView+Extension.swift in Sources */,
+				19CF364E2803201A008AD04F /* Items.swift in Sources */,
 				19CF362B28030C59008AD04F /* NetworkManager.swift in Sources */,
 				198F97BD2802DFC300E43FD5 /* AppDelegate.swift in Sources */,
 				19CF363E2803141E008AD04F /* DefaultView.swift in Sources */,
 				19CF363128030E8A008AD04F /* DefaultImageView.swift in Sources */,
+				19CF365028032041008AD04F /* Owner.swift in Sources */,
 				19CF364628031657008AD04F /* RepoTableViewCell.swift in Sources */,
 				198F97BF2802DFC300E43FD5 /* SceneDelegate.swift in Sources */,
+				19CF365228032069008AD04F /* License.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
