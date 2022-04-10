@@ -23,11 +23,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
     }
     
+    private func createHomeNC()->UINavigationController{
+        let homeNC        = HomeVC()
+        homeNC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "homeIcon"), tag: 1)
+        return UINavigationController(rootViewController: homeNC)
+    }
+
+    
     
     func createTabBarController() -> UITabBarController{
-        let tabBarController             = UITabBarController()
-        UITabBar.appearance().tintColor  = .systemGreen
-        tabBarController.viewControllers = []
+        let tabBarController                  = UITabBarController()
+        UITabBar.appearance().tintColor       = .systemGreen
+        tabBarController.viewControllers      = [createHomeNC()]
+        UITabBar.appearance().isTranslucent   = false
+        UITabBar.appearance().backgroundColor = .white
         return tabBarController
     }
     
