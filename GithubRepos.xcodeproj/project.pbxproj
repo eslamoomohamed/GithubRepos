@@ -56,6 +56,10 @@
 		198F97BB2802DFC300E43FD5 /* GithubRepos */ = {
 			isa = PBXGroup;
 			children = (
+				19CF361F28030789008AD04F /* Ponso */,
+				19CF3620280307C4008AD04F /* Model */,
+				19CF3621280307E1008AD04F /* View */,
+				19CF3622280307FE008AD04F /* ViewModel */,
 				198F97BC2802DFC300E43FD5 /* AppDelegate.swift */,
 				198F97BE2802DFC300E43FD5 /* SceneDelegate.swift */,
 				198F97C02802DFC300E43FD5 /* ViewController.swift */,
@@ -65,6 +69,34 @@
 				198F97CA2802DFC600E43FD5 /* Info.plist */,
 			);
 			path = GithubRepos;
+			sourceTree = "<group>";
+		};
+		19CF361F28030789008AD04F /* Ponso */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ponso;
+			sourceTree = "<group>";
+		};
+		19CF3620280307C4008AD04F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		19CF3621280307E1008AD04F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		19CF3622280307FE008AD04F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
