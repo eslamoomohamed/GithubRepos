@@ -27,6 +27,9 @@
 		19CF364E2803201A008AD04F /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF364D2803201A008AD04F /* Items.swift */; };
 		19CF365028032041008AD04F /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF364F28032041008AD04F /* Owner.swift */; };
 		19CF365228032069008AD04F /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF365128032069008AD04F /* License.swift */; };
+		19CF36542803231F008AD04F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF36532803231F008AD04F /* HomeViewModel.swift */; };
+		19CF365628032416008AD04F /* HomeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF365528032416008AD04F /* HomeCellViewModel.swift */; };
+		19CF3659280327D7008AD04F /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF3658280327D7008AD04F /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		19CF364D2803201A008AD04F /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		19CF364F28032041008AD04F /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		19CF365128032069008AD04F /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
+		19CF36532803231F008AD04F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		19CF365528032416008AD04F /* HomeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellViewModel.swift; sourceTree = "<group>"; };
+		19CF3658280327D7008AD04F /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,8 @@
 		19CF36242803093D008AD04F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				19CF36532803231F008AD04F /* HomeViewModel.swift */,
+				19CF365528032416008AD04F /* HomeCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -180,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				19CF362D28030D29008AD04F /* ErrorMessages.swift */,
+				19CF3658280327D7008AD04F /* Constant.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -349,11 +358,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				198F97C12802DFC300E43FD5 /* ViewController.swift in Sources */,
+				19CF36542803231F008AD04F /* HomeViewModel.swift in Sources */,
 				19CF36272803097E008AD04F /* HomeVC.swift in Sources */,
 				19CF364C28031F6C008AD04F /* RepoBase.swift in Sources */,
 				19CF363B2803125D008AD04F /* BodyLabel.swift in Sources */,
 				19CF3638280311F9008AD04F /* DefaultTitleLabel.swift in Sources */,
 				19CF363428030FC9008AD04F /* UIImageView+Extension.swift in Sources */,
+				19CF3659280327D7008AD04F /* Constant.swift in Sources */,
 				19CF362E28030D29008AD04F /* ErrorMessages.swift in Sources */,
 				19CF364228031458008AD04F /* UIView+Extension.swift in Sources */,
 				19CF364E2803201A008AD04F /* Items.swift in Sources */,
@@ -362,6 +373,7 @@
 				19CF363E2803141E008AD04F /* DefaultView.swift in Sources */,
 				19CF363128030E8A008AD04F /* DefaultImageView.swift in Sources */,
 				19CF365028032041008AD04F /* Owner.swift in Sources */,
+				19CF365628032416008AD04F /* HomeCellViewModel.swift in Sources */,
 				19CF364628031657008AD04F /* RepoTableViewCell.swift in Sources */,
 				198F97BF2802DFC300E43FD5 /* SceneDelegate.swift in Sources */,
 				19CF365228032069008AD04F /* License.swift in Sources */,
