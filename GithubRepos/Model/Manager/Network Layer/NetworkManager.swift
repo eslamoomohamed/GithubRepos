@@ -5,13 +5,17 @@
 //  Created by eslam mohamed on 10/04/2022.
 //
 
-import Foundation
+import UIKit
 
 protocol INetworkManager{
     func fetchDataFromApi<B:Codable>(urlString: String,baseModel: B.Type ,completion: @escaping (Result<B,ErrorMessages>)->Void )
 }
 
 class NetworkManager:INetworkManager{
+    
+    static let shared = NetworkManager()
+    let cache         = NSCache<NSString, UIImage>()
+    private init(){}
     
     func fetchDataFromApi<B>(urlString: String, baseModel: B.Type, completion: @escaping (Result<B, ErrorMessages>) -> Void) where B : Decodable, B : Encodable {
         
