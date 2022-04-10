@@ -18,6 +18,8 @@
 		19CF362E28030D29008AD04F /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF362D28030D29008AD04F /* ErrorMessages.swift */; };
 		19CF363128030E8A008AD04F /* DefaultImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF363028030E8A008AD04F /* DefaultImageView.swift */; };
 		19CF363428030FC9008AD04F /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF363328030FC9008AD04F /* UIImageView+Extension.swift */; };
+		19CF3638280311F9008AD04F /* DefaultTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF3637280311F9008AD04F /* DefaultTitleLabel.swift */; };
+		19CF363B2803125D008AD04F /* BodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF363A2803125D008AD04F /* BodyLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		19CF362D28030D29008AD04F /* ErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
 		19CF363028030E8A008AD04F /* DefaultImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultImageView.swift; sourceTree = "<group>"; };
 		19CF363328030FC9008AD04F /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		19CF3637280311F9008AD04F /* DefaultTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTitleLabel.swift; sourceTree = "<group>"; };
+		19CF363A2803125D008AD04F /* BodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		19CF3621280307E1008AD04F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				19CF3635280311B5008AD04F /* Labels */,
 				19CF362F28030E6E008AD04F /* UIImageView */,
 			);
 			path = View;
@@ -178,6 +183,31 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		19CF3635280311B5008AD04F /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				19CF36392803124D008AD04F /* Body */,
+				19CF3636280311CF008AD04F /* Title */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		19CF3636280311CF008AD04F /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				19CF3637280311F9008AD04F /* DefaultTitleLabel.swift */,
+			);
+			path = Title;
+			sourceTree = "<group>";
+		};
+		19CF36392803124D008AD04F /* Body */ = {
+			isa = PBXGroup;
+			children = (
+				19CF363A2803125D008AD04F /* BodyLabel.swift */,
+			);
+			path = Body;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -251,6 +281,8 @@
 			files = (
 				198F97C12802DFC300E43FD5 /* ViewController.swift in Sources */,
 				19CF36272803097E008AD04F /* HomeVC.swift in Sources */,
+				19CF363B2803125D008AD04F /* BodyLabel.swift in Sources */,
+				19CF3638280311F9008AD04F /* DefaultTitleLabel.swift in Sources */,
 				19CF363428030FC9008AD04F /* UIImageView+Extension.swift in Sources */,
 				19CF362E28030D29008AD04F /* ErrorMessages.swift in Sources */,
 				19CF362B28030C59008AD04F /* NetworkManager.swift in Sources */,
