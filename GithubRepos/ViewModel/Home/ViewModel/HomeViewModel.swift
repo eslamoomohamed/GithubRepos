@@ -38,6 +38,10 @@ class HomeViewModel:NSObject{
         }
     }
     
+    var numberOfCells:Int{
+        return cellViewModels.count
+    }
+    
     
     
     var reloadTableViewClosure:()->() = {}
@@ -56,7 +60,7 @@ class HomeViewModel:NSObject{
     
     
     func fetchData(){
-        networkShared.fetchDataFromApi(urlString: URLs.repos(), baseModel: RepoBase.self) { result in
+        networkShared.fetchDataFromApi(urlString: URLs.repos(), page: 1, baseModel: RepoBase.self) { result in
             self.state = .finished
             switch result{
             case .success(let repoBase):

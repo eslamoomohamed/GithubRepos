@@ -8,7 +8,7 @@
 import UIKit
 
 protocol INetworkManager{
-    func fetchDataFromApi<B:Codable>(urlString: String,baseModel: B.Type ,completion: @escaping (Result<B,ErrorMessages>)->Void )
+    func fetchDataFromApi<B:Codable>(urlString: String,page: Int,baseModel: B.Type ,completion: @escaping (Result<B,ErrorMessages>)->Void )
 }
 
 class NetworkManager:INetworkManager{
@@ -17,9 +17,10 @@ class NetworkManager:INetworkManager{
     let cache         = NSCache<NSString, UIImage>()
     private init(){}
     
-    func fetchDataFromApi<B>(urlString: String, baseModel: B.Type, completion: @escaping (Result<B, ErrorMessages>) -> Void) where B : Decodable, B : Encodable {
-        
-        guard let url = URL(string: urlString) else{
+    func fetchDataFromApi<B>(urlString: String,page: Int ,baseModel: B.Type, completion: @escaping (Result<B, ErrorMessages>) -> Void) where B : Decodable, B : Encodable {
+        let endpoint = urlString + "\(page)"
+        print(endpoint)
+        guard let url = URL(string: endpoint) else{
             completion(.failure(.invalidUrl))
             return
         }

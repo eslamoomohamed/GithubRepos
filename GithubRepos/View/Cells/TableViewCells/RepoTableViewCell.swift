@@ -27,6 +27,12 @@ class RepoTableViewCell: UITableViewCell {
 
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
+    func configureCell(cellVM:HomeCellViewModel){
+        self.avaterImg.downloadImg(from: cellVM.imageUrl)
+        self.repoName.text       = cellVM.repoTitle
+        self.repoDescrption.text = cellVM.repoDecription
+    }
+    
     private func configureContainerView(){
         self.backgroundColor = .white
         contentView.addSubview(containerView)
