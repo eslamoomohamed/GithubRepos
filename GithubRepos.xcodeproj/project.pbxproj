@@ -20,6 +20,9 @@
 		198F97C42802DFC300E43FD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198F97C22802DFC300E43FD5 /* Main.storyboard */; };
 		198F97C62802DFC600E43FD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 198F97C52802DFC600E43FD5 /* Assets.xcassets */; };
 		198F97C92802DFC600E43FD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198F97C72802DFC600E43FD5 /* LaunchScreen.storyboard */; };
+		19C2D8A52804DDD500354D86 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C2D8A42804DDD500354D86 /* NetworkManagerTests.swift */; };
+		19C2D8A82804F1C000354D86 /* MockNetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C2D8A72804F1C000354D86 /* MockNetworkManagerTests.swift */; };
+		19C2D8AB2804F24800354D86 /* NetworkMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C2D8AA2804F24800354D86 /* NetworkMock.swift */; };
 		19CF36272803097E008AD04F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF36262803097E008AD04F /* HomeVC.swift */; };
 		19CF362B28030C59008AD04F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF362A28030C59008AD04F /* NetworkManager.swift */; };
 		19CF362E28030D29008AD04F /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF362D28030D29008AD04F /* ErrorMessages.swift */; };
@@ -39,6 +42,16 @@
 		19CF3659280327D7008AD04F /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF3658280327D7008AD04F /* Constant.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		19C2D89F2804D52B00354D86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 198F97B12802DFC300E43FD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 198F97B82802DFC300E43FD5;
+			remoteInfo = GithubRepos;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		19339E2328045510006B05FC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		19339E26280456F6006B05FC /* Almarai-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Almarai-Bold.ttf"; sourceTree = "<group>"; };
@@ -55,6 +68,10 @@
 		198F97C52802DFC600E43FD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		198F97C82802DFC600E43FD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		198F97CA2802DFC600E43FD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19C2D89B2804D52B00354D86 /* GithubReposTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubReposTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19C2D8A42804DDD500354D86 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		19C2D8A72804F1C000354D86 /* MockNetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManagerTests.swift; sourceTree = "<group>"; };
+		19C2D8AA2804F24800354D86 /* NetworkMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMock.swift; sourceTree = "<group>"; };
 		19CF36262803097E008AD04F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		19CF362A28030C59008AD04F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		19CF362D28030D29008AD04F /* ErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
@@ -76,6 +93,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		198F97B62802DFC300E43FD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19C2D8982804D52B00354D86 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -124,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				198F97BB2802DFC300E43FD5 /* GithubRepos */,
+				19C2D89C2804D52B00354D86 /* GithubReposTests */,
 				198F97BA2802DFC300E43FD5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -132,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				198F97B92802DFC300E43FD5 /* GithubRepos.app */,
+				19C2D89B2804D52B00354D86 /* GithubReposTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,6 +181,32 @@
 				198F97CA2802DFC600E43FD5 /* Info.plist */,
 			);
 			path = GithubRepos;
+			sourceTree = "<group>";
+		};
+		19C2D89C2804D52B00354D86 /* GithubReposTests */ = {
+			isa = PBXGroup;
+			children = (
+				19C2D8A62804F17B00354D86 /* NetworkTests */,
+			);
+			path = GithubReposTests;
+			sourceTree = "<group>";
+		};
+		19C2D8A62804F17B00354D86 /* NetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				19C2D8A92804F21200354D86 /* Mocks */,
+				19C2D8A42804DDD500354D86 /* NetworkManagerTests.swift */,
+				19C2D8A72804F1C000354D86 /* MockNetworkManagerTests.swift */,
+			);
+			path = NetworkTests;
+			sourceTree = "<group>";
+		};
+		19C2D8A92804F21200354D86 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				19C2D8AA2804F24800354D86 /* NetworkMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		19CF361F28030789008AD04F /* Ponso */ = {
@@ -359,6 +411,24 @@
 			productReference = 198F97B92802DFC300E43FD5 /* GithubRepos.app */;
 			productType = "com.apple.product-type.application";
 		};
+		19C2D89A2804D52B00354D86 /* GithubReposTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19C2D8A32804D52B00354D86 /* Build configuration list for PBXNativeTarget "GithubReposTests" */;
+			buildPhases = (
+				19C2D8972804D52B00354D86 /* Sources */,
+				19C2D8982804D52B00354D86 /* Frameworks */,
+				19C2D8992804D52B00354D86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19C2D8A02804D52B00354D86 /* PBXTargetDependency */,
+			);
+			name = GithubReposTests;
+			productName = GithubReposTests;
+			productReference = 19C2D89B2804D52B00354D86 /* GithubReposTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -371,6 +441,10 @@
 				TargetAttributes = {
 					198F97B82802DFC300E43FD5 = {
 						CreatedOnToolsVersion = 13.1;
+					};
+					19C2D89A2804D52B00354D86 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 198F97B82802DFC300E43FD5;
 					};
 				};
 			};
@@ -388,6 +462,7 @@
 			projectRoot = "";
 			targets = (
 				198F97B82802DFC300E43FD5 /* GithubRepos */,
+				19C2D89A2804D52B00354D86 /* GithubReposTests */,
 			);
 		};
 /* End PBXProject section */
@@ -404,6 +479,13 @@
 				198F97C42802DFC300E43FD5 /* Main.storyboard in Resources */,
 				19339E2C280456F6006B05FC /* Almarai-ExtraBold.ttf in Resources */,
 				19339E2D280456F6006B05FC /* Almarai-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19C2D8992804D52B00354D86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +522,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		19C2D8972804D52B00354D86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19C2D8AB2804F24800354D86 /* NetworkMock.swift in Sources */,
+				19C2D8A82804F1C000354D86 /* MockNetworkManagerTests.swift in Sources */,
+				19C2D8A52804DDD500354D86 /* NetworkManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19C2D8A02804D52B00354D86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 198F97B82802DFC300E43FD5 /* GithubRepos */;
+			targetProxy = 19C2D89F2804D52B00354D86 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		198F97C22802DFC300E43FD5 /* Main.storyboard */ = {
@@ -634,6 +734,52 @@
 			};
 			name = Release;
 		};
+		19C2D8A12804D52B00354D86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JT7ZHXC955;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eslam.GithubReposTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GithubRepos.app/GithubRepos";
+			};
+			name = Debug;
+		};
+		19C2D8A22804D52B00354D86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JT7ZHXC955;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eslam.GithubReposTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GithubRepos.app/GithubRepos";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -651,6 +797,15 @@
 			buildConfigurations = (
 				198F97CE2802DFC600E43FD5 /* Debug */,
 				198F97CF2802DFC600E43FD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19C2D8A32804D52B00354D86 /* Build configuration list for PBXNativeTarget "GithubReposTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19C2D8A12804D52B00354D86 /* Debug */,
+				19C2D8A22804D52B00354D86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
