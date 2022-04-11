@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19339E2428045510006B05FC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19339E2328045510006B05FC /* UIViewController+Extension.swift */; };
+		19339E2B280456F6006B05FC /* Almarai-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19339E26280456F6006B05FC /* Almarai-Bold.ttf */; };
+		19339E2C280456F6006B05FC /* Almarai-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19339E27280456F6006B05FC /* Almarai-ExtraBold.ttf */; };
+		19339E2D280456F6006B05FC /* Almarai-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19339E28280456F6006B05FC /* Almarai-Regular.ttf */; };
+		19339E2F280456F6006B05FC /* Almarai-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19339E2A280456F6006B05FC /* Almarai-Light.ttf */; };
 		198F97BD2802DFC300E43FD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198F97BC2802DFC300E43FD5 /* AppDelegate.swift */; };
 		198F97BF2802DFC300E43FD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198F97BE2802DFC300E43FD5 /* SceneDelegate.swift */; };
 		198F97C12802DFC300E43FD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198F97C02802DFC300E43FD5 /* ViewController.swift */; };
@@ -33,6 +38,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19339E2328045510006B05FC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		19339E26280456F6006B05FC /* Almarai-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Almarai-Bold.ttf"; sourceTree = "<group>"; };
+		19339E27280456F6006B05FC /* Almarai-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Almarai-ExtraBold.ttf"; sourceTree = "<group>"; };
+		19339E28280456F6006B05FC /* Almarai-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Almarai-Regular.ttf"; sourceTree = "<group>"; };
+		19339E2A280456F6006B05FC /* Almarai-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Almarai-Light.ttf"; sourceTree = "<group>"; };
 		198F97B92802DFC300E43FD5 /* GithubRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		198F97BC2802DFC300E43FD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		198F97BE2802DFC300E43FD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +81,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19339E22280454FD006B05FC /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				19339E2328045510006B05FC /* UIViewController+Extension.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		19339E25280456F6006B05FC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				19339E26280456F6006B05FC /* Almarai-Bold.ttf */,
+				19339E27280456F6006B05FC /* Almarai-ExtraBold.ttf */,
+				19339E28280456F6006B05FC /* Almarai-Regular.ttf */,
+				19339E2A280456F6006B05FC /* Almarai-Light.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		198F97B02802DFC300E43FD5 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +119,7 @@
 		198F97BB2802DFC300E43FD5 /* GithubRepos */ = {
 			isa = PBXGroup;
 			children = (
+				19339E25280456F6006B05FC /* Fonts */,
 				19CF363228030FB4008AD04F /* Extension */,
 				19CF362C28030CFD008AD04F /* Utilities */,
 				19CF361F28030789008AD04F /* Ponso */,
@@ -204,6 +234,7 @@
 		19CF363228030FB4008AD04F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				19339E22280454FD006B05FC /* UIViewController */,
 				19CF36402803143A008AD04F /* UIView */,
 				19CF363F2803142E008AD04F /* UIImageView */,
 			);
@@ -345,8 +376,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				198F97C92802DFC600E43FD5 /* LaunchScreen.storyboard in Resources */,
+				19339E2F280456F6006B05FC /* Almarai-Light.ttf in Resources */,
+				19339E2B280456F6006B05FC /* Almarai-Bold.ttf in Resources */,
 				198F97C62802DFC600E43FD5 /* Assets.xcassets in Resources */,
 				198F97C42802DFC300E43FD5 /* Main.storyboard in Resources */,
+				19339E2C280456F6006B05FC /* Almarai-ExtraBold.ttf in Resources */,
+				19339E2D280456F6006B05FC /* Almarai-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +410,7 @@
 				19CF365028032041008AD04F /* Owner.swift in Sources */,
 				19CF365628032416008AD04F /* HomeCellViewModel.swift in Sources */,
 				19CF364628031657008AD04F /* RepoTableViewCell.swift in Sources */,
+				19339E2428045510006B05FC /* UIViewController+Extension.swift in Sources */,
 				198F97BF2802DFC300E43FD5 /* SceneDelegate.swift in Sources */,
 				19CF365228032069008AD04F /* License.swift in Sources */,
 			);
