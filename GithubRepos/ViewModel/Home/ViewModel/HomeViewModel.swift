@@ -11,6 +11,10 @@ class HomeViewModel:NSObject{
     
     
     let networkShared = NetworkManager.shared
+    var moreRepos     = true
+    var page: Int     = 1
+
+
     
     private var cellViewModels:[HomeCellViewModel] = [HomeCellViewModel](){
         didSet{
@@ -24,7 +28,7 @@ class HomeViewModel:NSObject{
         }
     }
     
-    var state:State!{
+    var state:State = .empty{
         didSet{
             switch state{
             case .loading:
@@ -54,17 +58,20 @@ class HomeViewModel:NSObject{
     
     override init() {
         super.init()
-        self.state = .empty
         self.fetchData()
     }
     
     
     func fetchData(){
-        networkShared.fetchDataFromApi(urlString: URLs.repos(), page: 1, baseModel: RepoBase.self) { result in
+        self.state = .loading
+
+        networkShared.fetchDataFromApi(urlString: URLs.repos(), page: page, baseModel: RepoBase.self) { result in
             self.state = .finished
             switch result{
             case .success(let repoBase):
                 guard let items = repoBase.items else{return}
+                if items.count < 30 {self.moreRepos = false}
+                else{self.page += 1}
                 print(items.count)
                 self.processFetchedRepos(repos: items)
             case.failure(let error):
@@ -89,7 +96,7 @@ class HomeViewModel:NSObject{
         for itme in repos {
             cellVM.append(createCellViewModel(item: itme))
         }
-        self.cellViewModels = cellVM
+        self.cellViewModels.append(contentsOf: cellVM) 
         
     }
     

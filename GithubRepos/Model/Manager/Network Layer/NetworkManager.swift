@@ -19,7 +19,7 @@ class NetworkManager:INetworkManager{
     
     func fetchDataFromApi<B>(urlString: String,page: Int ,baseModel: B.Type, completion: @escaping (Result<B, ErrorMessages>) -> Void) where B : Decodable, B : Encodable {
         let endpoint = urlString + "\(page)"
-        print(endpoint)
+//        print(endpoint)
         guard let url = URL(string: endpoint) else{
             completion(.failure(.invalidUrl))
             return
