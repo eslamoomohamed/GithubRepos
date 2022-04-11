@@ -58,7 +58,7 @@ class HomeViewModel:NSObject{
     
     override init() {
         super.init()
-        self.fetchData()
+//        self.fetchData()
     }
     
     
@@ -85,7 +85,7 @@ class HomeViewModel:NSObject{
     }
     
     func createCellViewModel(item: Items)->HomeCellViewModel{
-        let cellViewModel = HomeCellViewModel(imageUrl: item.owner?.avatar_url ?? "", repoTitle: item.name ?? "", repoDecription: item.description ?? "")
+        let cellViewModel = HomeCellViewModel(imageUrl: item.owner?.avatar_url ?? "", repoTitle: item.name ?? "", repoDecription: item.description ?? "No Description",issuesCount: item.open_issues_count ?? 0,starsCount: item.stargazers_count ?? 0,date: item.created_at?.convertDateToDisplay() ?? "")
         
         return cellViewModel
     }
@@ -97,6 +97,10 @@ class HomeViewModel:NSObject{
             cellVM.append(createCellViewModel(item: itme))
         }
         self.cellViewModels.append(contentsOf: cellVM) 
+        
+    }
+    
+    func getRepoStars(){
         
     }
     

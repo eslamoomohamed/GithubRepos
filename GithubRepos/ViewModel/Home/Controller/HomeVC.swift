@@ -19,6 +19,7 @@ class HomeVC: UIViewController {
         configureReposTableView()
         updateViewWithLoadingView()
         updateViewWithData()
+        viewModel.fetchData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,17 +43,17 @@ class HomeVC: UIViewController {
         
         viewModel.showLoadingToView = {
             print("show Loading")
-//            DispatchQueue.main.async { self.showLoadingView() }
+            DispatchQueue.main.async { self.showLoadingView() }
         }
         viewModel.hideLoadingToView = {
             print("hide Loading")
-////            DispatchQueue.main.async { self.removeLoadingView() }
+            DispatchQueue.main.async { self.removeLoadingView() }
         }
 
     }
     
     private func configureView(){
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .white
     }
     
     private func configureReposTableView(){
@@ -62,6 +63,7 @@ class HomeVC: UIViewController {
         reposTableView.delegate   = self
         reposTableView.dataSource = self
         reposTableView.backgroundColor = .clear
+        reposTableView.separatorStyle  = .none
         reposTableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             reposTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
