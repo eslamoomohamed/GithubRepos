@@ -11,5 +11,8 @@ struct HomeCellViewModel {
     let imageUrl:String
     let repoTitle:String
     let repoDecription:String
+    let issuesCount: Int
+    let starsCount: Int
+    let date:String
     
 }
