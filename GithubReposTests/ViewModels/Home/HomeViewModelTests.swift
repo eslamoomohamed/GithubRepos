@@ -1,5 +1,5 @@
 //
-//  MockNetworkManagerTests.swift
+//  HomeViewModelTests.swift
 //  GithubReposTests
 //
 //  Created by eslam mohamed on 12/04/2022.
@@ -8,13 +8,13 @@
 import XCTest
 @testable import GithubRepos
 
-class MockNetworkManagerTests: XCTestCase {
-    
-    var sut:NetworkMock!
+class HomeViewModelTests: XCTestCase {
 
+    var sut:HomeViewModel!
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        sut = NetworkMock(responseError: false)
+        sut = HomeViewModel()
     }
 
     override func tearDownWithError() throws {
@@ -22,19 +22,9 @@ class MockNetworkManagerTests: XCTestCase {
         sut = nil
     }
 
-    func testMockApiFunc() throws {
+    func testCreateCellViewModel() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        sut.fetchDataFromApi(urlString: "", page: 1, baseModel: RepoBase.self) { result in
-            switch result{
-            case .success(let response):
-                XCTAssertNotNil(response)
-            case .failure(let error):
-                print(error)
-                XCTFail()
-            }
-
-        }
     }
 
     func testPerformanceExample() throws {

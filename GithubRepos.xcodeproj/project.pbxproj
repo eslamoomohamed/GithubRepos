@@ -23,6 +23,10 @@
 		19C2D8A52804DDD500354D86 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C2D8A42804DDD500354D86 /* NetworkManagerTests.swift */; };
 		19C2D8A82804F1C000354D86 /* MockNetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C2D8A72804F1C000354D86 /* MockNetworkManagerTests.swift */; };
 		19C2D8AB2804F24800354D86 /* NetworkMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C2D8AA2804F24800354D86 /* NetworkMock.swift */; };
+		19C2D8AF2805078D00354D86 /* StringsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C2D8AE2805078D00354D86 /* StringsExtension.swift */; };
+		19C2D8B228050E6300354D86 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C2D8B128050E6300354D86 /* DateExtension.swift */; };
+		19C2D8B5280518BC00354D86 /* UIViewControllerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C2D8B4280518BC00354D86 /* UIViewControllerExtensionTests.swift */; };
+		19C2D8B928051C4B00354D86 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C2D8B828051C4B00354D86 /* HomeViewModelTests.swift */; };
 		19CF36272803097E008AD04F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF36262803097E008AD04F /* HomeVC.swift */; };
 		19CF362B28030C59008AD04F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF362A28030C59008AD04F /* NetworkManager.swift */; };
 		19CF362E28030D29008AD04F /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF362D28030D29008AD04F /* ErrorMessages.swift */; };
@@ -72,6 +76,10 @@
 		19C2D8A42804DDD500354D86 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		19C2D8A72804F1C000354D86 /* MockNetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManagerTests.swift; sourceTree = "<group>"; };
 		19C2D8AA2804F24800354D86 /* NetworkMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMock.swift; sourceTree = "<group>"; };
+		19C2D8AE2805078D00354D86 /* StringsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringsExtension.swift; sourceTree = "<group>"; };
+		19C2D8B128050E6300354D86 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		19C2D8B4280518BC00354D86 /* UIViewControllerExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensionTests.swift; sourceTree = "<group>"; };
+		19C2D8B828051C4B00354D86 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		19CF36262803097E008AD04F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		19CF362A28030C59008AD04F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		19CF362D28030D29008AD04F /* ErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
@@ -186,6 +194,8 @@
 		19C2D89C2804D52B00354D86 /* GithubReposTests */ = {
 			isa = PBXGroup;
 			children = (
+				19C2D8B628051C2D00354D86 /* ViewModels */,
+				19C2D8AC2805075D00354D86 /* ExtensionTests */,
 				19C2D8A62804F17B00354D86 /* NetworkTests */,
 			);
 			path = GithubReposTests;
@@ -207,6 +217,56 @@
 				19C2D8AA2804F24800354D86 /* NetworkMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		19C2D8AC2805075D00354D86 /* ExtensionTests */ = {
+			isa = PBXGroup;
+			children = (
+				19C2D8B32805189D00354D86 /* UIViewController */,
+				19C2D8B028050E4900354D86 /* Date */,
+				19C2D8AD2805077000354D86 /* String */,
+			);
+			path = ExtensionTests;
+			sourceTree = "<group>";
+		};
+		19C2D8AD2805077000354D86 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				19C2D8AE2805078D00354D86 /* StringsExtension.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		19C2D8B028050E4900354D86 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				19C2D8B128050E6300354D86 /* DateExtension.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		19C2D8B32805189D00354D86 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				19C2D8B4280518BC00354D86 /* UIViewControllerExtensionTests.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		19C2D8B628051C2D00354D86 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				19C2D8B728051C3800354D86 /* Home */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		19C2D8B728051C3800354D86 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				19C2D8B828051C4B00354D86 /* HomeViewModelTests.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		19CF361F28030789008AD04F /* Ponso */ = {
@@ -526,6 +586,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19C2D8AF2805078D00354D86 /* StringsExtension.swift in Sources */,
+				19C2D8B928051C4B00354D86 /* HomeViewModelTests.swift in Sources */,
+				19C2D8B228050E6300354D86 /* DateExtension.swift in Sources */,
+				19C2D8B5280518BC00354D86 /* UIViewControllerExtensionTests.swift in Sources */,
 				19C2D8AB2804F24800354D86 /* NetworkMock.swift in Sources */,
 				19C2D8A82804F1C000354D86 /* MockNetworkManagerTests.swift in Sources */,
 				19C2D8A52804DDD500354D86 /* NetworkManagerTests.swift in Sources */,
