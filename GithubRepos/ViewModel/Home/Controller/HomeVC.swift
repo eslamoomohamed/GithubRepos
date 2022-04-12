@@ -9,8 +9,9 @@ import UIKit
 
 class HomeVC: UIViewController {
 
-    var reposTableView:UITableView!
-    let viewModel = HomeViewModel()
+    private var reposTableView:UITableView!
+    private var viewModel:HomeViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +20,7 @@ class HomeVC: UIViewController {
         configureReposTableView()
         updateViewWithLoadingView()
         updateViewWithData()
+        guard let viewModel = viewModel else { return }
         viewModel.fetchData()
     }
     
@@ -27,8 +29,12 @@ class HomeVC: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
+    func configureViewModel(){
+        viewModel = HomeViewModel()
+    }
+    
     func updateViewWithData(){
-
+        guard let viewModel = viewModel else { return }
         viewModel.reloadTableViewClosure = {
             print("reload table view executed")
             DispatchQueue.main.async {
@@ -40,7 +46,8 @@ class HomeVC: UIViewController {
 
 
     private func updateViewWithLoadingView(){
-        
+        guard let viewModel = viewModel else { return }
+
         viewModel.showLoadingToView = {
             print("show Loading")
             DispatchQueue.main.async { self.showLoadingView() }
@@ -79,11 +86,13 @@ class HomeVC: UIViewController {
 extension HomeVC:UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let viewModel = viewModel else { return 0 }
         return viewModel.numberOfCells
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RepoTableViewCell.reuseID, for: indexPath) as! RepoTableViewCell
+        guard let viewModel = viewModel else { return cell }
         cell.configureCell(cellVM: viewModel.getCellViewModel(at: indexPath))
         return cell
     }
@@ -103,6 +112,7 @@ extension HomeVC: UITableViewDelegate{
         let height         = scrollView.frame.size.height
         
         if offsetY > contentHeight - height {
+            guard let viewModel = viewModel else { return }
             guard viewModel.moreRepos else{return}
             viewModel.fetchData()
             
