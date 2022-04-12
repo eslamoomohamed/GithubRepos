@@ -117,6 +117,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		193084E328059DFF0071E2D5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				19C2D8A42804DDD500354D86 /* NetworkManagerTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		19339E22280454FD006B05FC /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,9 +212,8 @@
 		19C2D8A62804F17B00354D86 /* NetworkTests */ = {
 			isa = PBXGroup;
 			children = (
+				193084E328059DFF0071E2D5 /* Services */,
 				19C2D8A92804F21200354D86 /* Mocks */,
-				19C2D8A42804DDD500354D86 /* NetworkManagerTests.swift */,
-				19C2D8A72804F1C000354D86 /* MockNetworkManagerTests.swift */,
 			);
 			path = NetworkTests;
 			sourceTree = "<group>";
@@ -215,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				19C2D8AA2804F24800354D86 /* NetworkMock.swift */,
+				19C2D8A72804F1C000354D86 /* MockNetworkManagerTests.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
