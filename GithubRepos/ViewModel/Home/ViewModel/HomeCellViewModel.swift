@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HomeCellViewModel {
+struct HomeCellViewModel:Equatable {
     let imageUrl:String
     let repoTitle:String
     let repoDecription:String
