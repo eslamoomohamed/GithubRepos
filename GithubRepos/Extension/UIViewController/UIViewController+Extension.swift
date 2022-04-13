@@ -9,7 +9,12 @@ import UIKit
 
 fileprivate var containerView: DefaultView!
 
-extension UIViewController{
+protocol IUIViewController{
+    func showLoadingView()
+    func removeLoadingView()
+}
+
+extension UIViewController:IUIViewController{
     
     func showLoadingView(){
         containerView = DefaultView(color: .darkGray, raduis: 15)

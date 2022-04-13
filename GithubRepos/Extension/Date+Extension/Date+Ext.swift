@@ -7,7 +7,11 @@
 
 import Foundation
 
-extension Date{
+protocol IDate{
+    func convertDateToString() -> String
+}
+
+extension Date:IDate{
     
     func convertDateToString() -> String{
         let dateFormatter        = DateFormatter()

@@ -10,10 +10,10 @@ import XCTest
 
 class HomeViewModelTests: XCTestCase {
 
-    var sutForCreateCellViewModel:HomeViewModel!
+    var sutForCreateCellViewModel:IHomeViewModel!
     var homeCellVMForCreateCellViewModel:HomeCellViewModel!
     var mockDataForCreateCellViewModel:NetworkMock!
-    var sutForProcessFetchedRepos:HomeViewModel!
+    var sutForProcessFetchedRepos:IHomeViewModel!
     var homeCellVMForProcessFetchedRepos:HomeCellViewModel!
     var mockDataForProcessFetchedRepos:NetworkMock!
     

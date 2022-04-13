@@ -7,9 +7,16 @@
 
 import Foundation
 
-class HomeViewModel{
+protocol IHomeViewModel{
+    func fetchData()
+    func getCellViewModel(at indexPath: IndexPath)->HomeCellViewModel
+    func createCellViewModel(item: Items)->HomeCellViewModel
+    func processFetchedRepos(repos:[Items])
+}
+
+class HomeViewModel:IHomeViewModel{
     
-    var networkShared:NetworkManager?
+    var networkShared:INetworkManager?
     var moreRepos:Bool?
     var page:Int?
 
@@ -55,7 +62,7 @@ class HomeViewModel{
     var hideLoadingToView: (()->())       = {}
     
     
-    init(networkShared:NetworkManager? = NetworkManager.shared,moreRepos:Bool? = true,page:Int? = 1) {
+    init(networkShared:INetworkManager? = NetworkManager.shared,moreRepos:Bool? = true,page:Int? = 1) {
         self.networkShared = networkShared
         self.moreRepos     = moreRepos
         self.page          = page

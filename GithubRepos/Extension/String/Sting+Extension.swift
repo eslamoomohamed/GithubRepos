@@ -7,7 +7,12 @@
 
 import Foundation
 
-extension String{
+protocol IStrings{
+    func convertToDate() -> Date?
+    func convertDateToDisplay() -> String
+}
+
+extension String:IStrings{
     
     func convertToDate() -> Date? {
         let dateFormatter         = DateFormatter()

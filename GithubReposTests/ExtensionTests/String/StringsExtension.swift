@@ -10,10 +10,10 @@ import XCTest
 
 class StringsExtension: XCTestCase {
 
-    var sut:String!
+    var sut:IStrings!
     var dateFormatter:DateFormatter!
-    var dateStr:String!
-    var dateFromString:Date!
+    var dateStr:IStrings!
+    var dateFromString:IDate!
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -35,7 +35,7 @@ class StringsExtension: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         dateFormatter.dateFormat  = "yyyy-MM-dd'T'HH:mm:ssZ"
-        XCTAssertTrue(sut.convertToDate() == dateFormatter.date(from: dateStr))
+        XCTAssertTrue(sut.convertToDate() == dateFormatter.date(from: dateStr as! String))
     }
 
     func testConvertToDateToDisplayFunc() throws {

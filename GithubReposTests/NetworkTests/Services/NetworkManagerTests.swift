@@ -10,7 +10,7 @@ import XCTest
 
 class NetworkManagerTests: XCTestCase {
     
-    var sut: NetworkManager!
+    var sut: INetworkManager!
 
     override func setUpWithError() throws {
         sut = NetworkManager.shared
