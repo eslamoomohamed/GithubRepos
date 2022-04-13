@@ -7,7 +7,11 @@
 
 import UIKit
 
-extension UIView{
+protocol IUIView{
+    func addBorder(color: UIColor)
+}
+
+extension UIView:IUIView{
     
     func addBorder(color: UIColor){
         layer.borderWidth = 1

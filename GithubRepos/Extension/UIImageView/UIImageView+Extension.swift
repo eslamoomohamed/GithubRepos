@@ -9,7 +9,10 @@ import UIKit
 
 let cache = NetworkManager.shared.cache
 
-extension UIImageView{
+protocol IUIImageView{
+    func downloadImg(from urlString: String)
+}
+extension UIImageView:IUIImageView{
     
     func downloadImg(from urlString: String){
         let cacheKy    = NSString(string: urlString)
