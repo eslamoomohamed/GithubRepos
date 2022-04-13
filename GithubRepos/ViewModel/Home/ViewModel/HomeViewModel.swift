@@ -61,19 +61,19 @@ class HomeViewModel{
         self.page          = page
 //        self.fetchData()
     }
-    
+    static var count = 1
     func fetchData(){
         self.state = .loading
         guard var moreRepos     = moreRepos else { return }
-        guard var page          = page else { return }
+        guard let page          = page else { return }
         guard let networkShared = networkShared else { return }
         if moreRepos{
-            networkShared.fetchDataFromApi(urlString: URLs.repos(), page: page, baseModel: RepoBase.self) { result in
+            networkShared.fetchDataFromApi(urlString: URLs.repos(), page: HomeViewModel.count, baseModel: RepoBase.self) { result in
                 self.state = .finished
                 switch result{
                 case .success(let repoBase):
                     guard let items = repoBase.items else{return}
-                    if items.count < repoBase.total_count ?? 30 {page += 1;moreRepos = true}
+                    if items.count < repoBase.total_count ?? 30 {HomeViewModel.count += page;moreRepos = true}
                     else{moreRepos = false}
                     print(items.count)
                     self.processFetchedRepos(repos: items)
