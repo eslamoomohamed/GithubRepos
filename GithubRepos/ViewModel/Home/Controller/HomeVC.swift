@@ -29,9 +29,14 @@ class HomeVC: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    func configureViewModel(){
-        viewModel = HomeViewModel()
+    init(viewModel:HomeViewModel? = HomeViewModel()){
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
     }
+    
+    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+    
+
     
     func updateViewWithData(){
         guard let viewModel = viewModel else { return }
