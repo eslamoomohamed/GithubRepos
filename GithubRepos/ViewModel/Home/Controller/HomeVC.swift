@@ -14,8 +14,6 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         configureView()
         configureReposTableView()
         updateViewWithLoadingView()
@@ -36,44 +34,25 @@ class HomeVC: UIViewController {
     
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
-
-    
     func updateViewWithData(){
-        guard let viewModel = viewModel else { return }
-        viewModel.reloadTableViewClosure = {
-            print("reload table view executed")
-            DispatchQueue.main.async {
-            self.reposTableView.reloadData()
-            }
-        }
-
+        guard let viewModel              = viewModel else { return }
+        viewModel.reloadTableViewClosure = { DispatchQueue.main.async { self.reposTableView.reloadData() } }
     }
-
 
     private func updateViewWithLoadingView(){
-        guard let viewModel = viewModel else { return }
-
-        viewModel.showLoadingToView = {
-            print("show Loading")
-            DispatchQueue.main.async { self.showLoadingView() }
-        }
-        viewModel.hideLoadingToView = {
-            print("hide Loading")
-            DispatchQueue.main.async { self.removeLoadingView() }
-        }
-
+        guard let viewModel         = viewModel else { return }
+        viewModel.showLoadingToView = { DispatchQueue.main.async { self.showLoadingView() } }
+        viewModel.hideLoadingToView = { DispatchQueue.main.async { self.removeLoadingView() } }
     }
     
-    private func configureView(){
-        view.backgroundColor = .white
-    }
+    private func configureView(){ view.backgroundColor = .white }
     
     private func configureReposTableView(){
         reposTableView = UITableView(frame: .zero, style: .plain)
         view.addSubview(reposTableView)
         reposTableView.register(RepoTableViewCell.self, forCellReuseIdentifier: RepoTableViewCell.reuseID)
-        reposTableView.delegate   = self
-        reposTableView.dataSource = self
+        reposTableView.delegate        = self
+        reposTableView.dataSource      = self
         reposTableView.backgroundColor = .clear
         reposTableView.separatorStyle  = .none
         reposTableView.translatesAutoresizingMaskIntoConstraints = false
@@ -111,18 +90,14 @@ extension HomeVC: UITableViewDelegate{
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        
         let offsetY        = scrollView.contentOffset.y
         let contentHeight  = scrollView.contentSize.height
         let height         = scrollView.frame.size.height
-        
         if offsetY > contentHeight - height {
             guard let viewModel = viewModel else { return }
-            guard viewModel.moreRepos else{return}
-            viewModel.fetchData()
-            
-            
+            guard let moreRepos = viewModel.moreRepos else{return}
+            if moreRepos{ viewModel.fetchData() } else{return}
         }
-
     }
+    
 }
