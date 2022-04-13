@@ -7,12 +7,11 @@
 
 import Foundation
 
-class HomeViewModel:NSObject{
+class HomeViewModel{
     
-    
-    let networkShared = NetworkManager.shared
-    var moreRepos     = true
-    var page: Int     = 1
+    var networkShared:NetworkManager?
+    var moreRepos:Bool?
+    var page:Int?
 
 
     
@@ -48,30 +47,34 @@ class HomeViewModel:NSObject{
     
     
     
-    var reloadTableViewClosure:()->() = {}
-    var showEmptyStateClosure:(()->()) = {}
+    var reloadTableViewClosure:()->()     = {}
+    var showEmptyStateClosure:(()->())    = {}
     var showAlertMessageClosure: (()->()) = {}
     var showErrorMessageClosure: (()->()) = {}
-    var showLoadingToView:  (()->()) = {}
-    var hideLoadingToView: (()->())  = {}
+    var showLoadingToView:  (()->())      = {}
+    var hideLoadingToView: (()->())       = {}
     
     
-    override init() {
-        super.init()
+    init(networkShared:NetworkManager? = NetworkManager.shared,moreRepos:Bool? = true,page:Int? = 1) {
+        self.networkShared = networkShared
+        self.moreRepos     = moreRepos
+        self.page          = page
 //        self.fetchData()
     }
     
-    
     func fetchData(){
         self.state = .loading
+        guard var moreRepos     = moreRepos else { return }
+        guard var page          = page else { return }
+        guard let networkShared = networkShared else { return }
         if moreRepos{
             networkShared.fetchDataFromApi(urlString: URLs.repos(), page: page, baseModel: RepoBase.self) { result in
                 self.state = .finished
                 switch result{
                 case .success(let repoBase):
                     guard let items = repoBase.items else{return}
-                    if items.count < repoBase.total_count ?? 30 {self.page += 1;self.moreRepos = true}
-                    else{self.moreRepos = false}
+                    if items.count < repoBase.total_count ?? 30 {page += 1;moreRepos = true}
+                    else{moreRepos = false}
                     print(items.count)
                     self.processFetchedRepos(repos: items)
                 case.failure(let error):
@@ -87,18 +90,15 @@ class HomeViewModel:NSObject{
     
     func createCellViewModel(item: Items)->HomeCellViewModel{
         let cellViewModel = HomeCellViewModel(imageUrl: item.owner?.avatar_url ?? "", repoTitle: item.name ?? "", repoDecription: item.description ?? "No Description",issuesCount: item.open_issues_count ?? 0,starsCount: item.stargazers_count ?? 0,date: item.created_at?.convertDateToDisplay() ?? "")
-        
         return cellViewModel
     }
     
     func processFetchedRepos(repos:[Items]){
-        
         var cellVM = [HomeCellViewModel]()
         for itme in repos {
             cellVM.append(createCellViewModel(item: itme))
         }
         self.cellViewModels.append(contentsOf: cellVM)
-        
     }
     
     
